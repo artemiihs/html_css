@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Naturale</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cria sua conta agora</h1>
+    <p>Para podermos enviar informações referentes aos seus pedidos, avisar de promoções e enviarmos cupons no futuro precisamos de alguns dados seus. Vamos lá! </p><br>
+    <form action="cadastro.php" method="post">
+        <fieldset>
+            <legend>Login</legend>
+            <p>
+                <label for="inome">Nome: </label>
+                <input type="text" name="nome" id="inome" required minlength="1" maxlength="20" placeholder="Nome de usuário" size="25" autocomplete="on">
+            </p>
+            <p>
+                <label for="isobrenome">Sobrenome: </label>
+                <input type="text" name="sobrenome" id="isobrenome" required minlength="1" maxlength="50" placeholder="Sobrenome do usuário" size="25" autocomplete="on">
+            </p>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Informações de contato</legend>
+            <p>
+                <label for="iemail">E-mail para contato:</label>
+                <input type="email" name="email" id="iemail" requiered autocomplete="email" placeholder="Digite seu e-mail">
+            </p>
+            <p>
+                <label for="itel">Telefone para contato</label>
+                <input type="tel" name="telefone" id="itel" autocomplete="tel" placeholder="(xx)xxxx-xxxx">
+            </p>
+            <p>
+                <label for="isenha">Crie sua senha: </label>
+                <input type="password" name="senha" id="isenha" required min="6" max="8" placeholder="Senha de até 8 dígitos">
+            </p>
+
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Data de nascimento</legend>
+            <p>
+                <label for="isexo">Qual seu sexo?</label>
+                <label for="isexofem"><input type="radio" name="sexo" id="isexofem" checked>Feminino</label>
+                <label for="isexomasc"><input type="radio" name="sexo" id="isexomasc">Masculino</label>
+            </p>
+            <p>
+                <label for="imes">Em qual mês é o seu aniversário? </label>
+                <input type="month" name="mes" id="imes">
+            </p>
+            <p>
+                <label for="idata">Data de nascimento: </label>
+                <input type="date" name="data" id="idata">
+            </p>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Sua experiência com o Naturale</legend>
+            <p>
+                <label for="ihora">Qual hora podemos entrar em contato com você?</label>
+                <input type="time" name="hora" id="ihora">
+            </p>
+            <p>
+                <label for="iproduto">Quantas amostras de produtos gostaria de receber? </label>
+                <input type="number" name="produto" id="iproduto" min="0" max="10">
+            </p>
+            <p>
+                <p>Selecione o que você gostaria de receber na sua caixa de e-mail:</p>
+                <input type="checkbox" name="ques" id="iques" checked> Promoções <br>
+                <input type="checkbox" name="" id=""> Cupons <br>
+                <input type="checkbox" name="" id=""> Aviso de queima de estoque <br>
+                <input type="checkbox" name="" id=""> Black Friday <br>
+            </p>
+            <p>
+                <label for="icor">Qual a cor que você gostaqria de ver nos nossos produtos?</label>
+                <input type="color" name="cor" id="icor" value="#007895">
+            </p>
+            <p>
+                <label for="isast">Nível de satisfação com nosso site de 0 a 10: </label>
+                <input type="range" name="nivel" id="isast" min="0" max="10">
+            </p>
+            <p>
+                <label for="ifoto">Nos envie uma sua de antes de usar nossos produtos: </label> 
+                <br><br>
+                <input type="file" name="foto" id="ifoto">
+            </p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Mais sobre você: </legend>
+            <p>
+                <label for="ireg">Selecione a região que você mora:</label>
+                <select name="" id="ireg">
+                    <option value="">São Paulo, SP</option>
+                    <option value="">Brasília, DF</option>
+                    <option value="">Rio de Janeiro, RJ</option>
+                </select>
+            </p>
+            <p>
+                <label for="iprof">Selecione qual é a sua profissão: </label>
+                <input type="text" name="prof" id="iprof" list="listaprof">
+                <datalist id="listaprof">
+                    <option value="">Programador</option>
+                    <option value="">Designer</option>
+                    <option value="">Engenheiro</option>
+                    <option value="">Médico</option>
+                    <option value="">Dentista</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="imsg">Conte um pouco sobre você: </label>
+                <br><br>
+                <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            </p>
+        </fieldset>
+        
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+
+    </form>
+</body>
+</html>
